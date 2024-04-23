@@ -1,0 +1,55 @@
+/* Basic reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the entire body for a pleasant background and text color */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Main heading style */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styling for clarity and readability */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #555;
+    color: #fff;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Responsive table centering */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+}
