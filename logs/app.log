@@ -1,0 +1,102 @@
+2024-05-29 11:29:49 info: Server is running on http://localhost:3000
+2024-05-29 11:30:00 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-29 11:30:00 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-29 11:30:00 error: Error checking http://acwm.lacounty.gov: {"name":"ACWM","url":"http://acwm.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://dhs.lacounty.gov: {"name":"DHS","url":"http://dhs.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://lacountylibrary.org: {"name":"Library","url":"http://lacountylibrary.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://dcba.lacounty.gov: {"name":"DCBA","url":"http://dcba.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://hr.lacounty.gov: {"name":"HR","url":"http://hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://employee.hr.lacounty.gov: {"name":"HR-EHR","url":"http://employee.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://beaches.lacounty.gov: {"name":"DBH-Beaches","url":"http://beaches.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://auditor.lacounty.gov: {"name":"Auditor","url":"http://auditor.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://oia.lacounty.gov: {"name":"DCBA-OIA","url":"http://oia.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://hildalsolis.org: {"name":"BOS-Supervisor District 1","url":"http://hildalsolis.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://dcfs.lacounty.gov: {"name":"DCFS","url":"http://dcfs.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://ccjv.lacounty.gov: {"name":"BOS-ccjv","url":"http://ccjv.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://strategic-plan.hr.lacounty.gov: {"name":"HR-Strategic Plan","url":"http://strategic-plan.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://central.gis.lacounty.gov: {"name":"ISD-Central eGIS","url":"http://central.gis.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://career-pathfinder.hr.lacounty.gov: {"name":"HR-Career Pathfinder","url":"http://career-pathfinder.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://ceo.lacounty.gov: {"name":"CEO","url":"http://ceo.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://isddtd.wpengine.com: {"name":"ISD - DTD","url":"http://isddtd.wpengine.com","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://ahsc.lacounty.gov: {"name":"CEO-Affordable Housing","url":"http://ahsc.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://justiceconnect.org: {"name":"JCOD-lacjcodsp","url":"http://justiceconnect.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://lacountyhelpcenter.org: {"name":"DCBA-LACounty Help Center","url":"http://lacountyhelpcenter.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://mva.lacounty.gov: {"name":"MVA","url":"http://mva.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://economicdevelopment.lacounty.gov: {"name":"CEO-Economic Development","url":"http://economicdevelopment.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:00 error: Error checking http://lacountyparkneeds.org: {"name":"Parks- lacountyparkneeds","url":"http://lacountyparkneeds.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://hildalsolis.org: {"name":"BOS-Supervisor District 1","url":"http://hildalsolis.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-29 11:30:30 error: Error checking http://dcfs.lacounty.gov: {"name":"DCFS","url":"http://dcfs.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://employee.hr.lacounty.gov: {"name":"HR-EHR","url":"http://employee.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://dhs.lacounty.gov: {"name":"DHS","url":"http://dhs.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://beaches.lacounty.gov: {"name":"DBH-Beaches","url":"http://beaches.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://hr.lacounty.gov: {"name":"HR","url":"http://hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://oia.lacounty.gov: {"name":"DCBA-OIA","url":"http://oia.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://strategic-plan.hr.lacounty.gov: {"name":"HR-Strategic Plan","url":"http://strategic-plan.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://auditor.lacounty.gov: {"name":"Auditor","url":"http://auditor.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://central.gis.lacounty.gov: {"name":"ISD-Central eGIS","url":"http://central.gis.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://ccjv.lacounty.gov: {"name":"BOS-ccjv","url":"http://ccjv.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://ahsc.lacounty.gov: {"name":"CEO-Affordable Housing","url":"http://ahsc.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://ceo.lacounty.gov: {"name":"CEO","url":"http://ceo.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://career-pathfinder.hr.lacounty.gov: {"name":"HR-Career Pathfinder","url":"http://career-pathfinder.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://mva.lacounty.gov: {"name":"MVA","url":"http://mva.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://acwm.lacounty.gov: {"name":"ACWM","url":"http://acwm.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://isddtd.wpengine.com: {"name":"ISD - DTD","url":"http://isddtd.wpengine.com","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://lacountyhelpcenter.org: {"name":"DCBA-LACounty Help Center","url":"http://lacountyhelpcenter.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://justiceconnect.org: {"name":"JCOD-lacjcodsp","url":"http://justiceconnect.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://lacountylibrary.org: {"name":"Library","url":"http://lacountylibrary.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-29 11:30:30 error: Error checking http://dcba.lacounty.gov: {"name":"DCBA","url":"http://dcba.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://economicdevelopment.lacounty.gov: {"name":"CEO-Economic Development","url":"http://economicdevelopment.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 11:30:30 error: Error checking http://lacountyparkneeds.org: {"name":"Parks- lacountyparkneeds","url":"http://lacountyparkneeds.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:02 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-29 12:56:03 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-29 12:56:03 error: Error checking http://dcfs.lacounty.gov: {"name":"DCFS","url":"http://dcfs.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://beaches.lacounty.gov: {"name":"DBH-Beaches","url":"http://beaches.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://dhs.lacounty.gov: {"name":"DHS","url":"http://dhs.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://oia.lacounty.gov: {"name":"DCBA-OIA","url":"http://oia.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://hr.lacounty.gov: {"name":"HR","url":"http://hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://employee.hr.lacounty.gov: {"name":"HR-EHR","url":"http://employee.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://acwm.lacounty.gov: {"name":"ACWM","url":"http://acwm.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://lacountyhelpcenter.org: {"name":"DCBA-LACounty Help Center","url":"http://lacountyhelpcenter.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://lacountylibrary.org: {"name":"Library","url":"http://lacountylibrary.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://hildalsolis.org: {"name":"BOS-Supervisor District 1","url":"http://hildalsolis.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://isddtd.wpengine.com: {"name":"ISD - DTD","url":"http://isddtd.wpengine.com","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://dcba.lacounty.gov: {"name":"DCBA","url":"http://dcba.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://strategic-plan.hr.lacounty.gov: {"name":"HR-Strategic Plan","url":"http://strategic-plan.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://central.gis.lacounty.gov: {"name":"ISD-Central eGIS","url":"http://central.gis.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://ccjv.lacounty.gov: {"name":"BOS-ccjv","url":"http://ccjv.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://ceo.lacounty.gov: {"name":"CEO","url":"http://ceo.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://ahsc.lacounty.gov: {"name":"CEO-Affordable Housing","url":"http://ahsc.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://justiceconnect.org: {"name":"JCOD-lacjcodsp","url":"http://justiceconnect.org","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://mva.lacounty.gov: {"name":"MVA","url":"http://mva.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://career-pathfinder.hr.lacounty.gov: {"name":"HR-Career Pathfinder","url":"http://career-pathfinder.hr.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://auditor.lacounty.gov: {"name":"Auditor","url":"http://auditor.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://economicdevelopment.lacounty.gov: {"name":"CEO-Economic Development","url":"http://economicdevelopment.lacounty.gov","status":"down","error":"No response or server not reachable"}
+2024-05-29 12:56:03 error: Error checking http://lacountyparkneeds.org: {"name":"Parks- lacountyparkneeds","url":"http://lacountyparkneeds.org","status":"down","error":"No response or server not reachable"}
+2024-05-30 14:00:35 info: Server is running on http://localhost:3000
+2024-05-30 14:00:42 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:00:42 error: Error checking http://hildalsolis.org: {"name":"BOS-Supervisor District 1","url":"http://hildalsolis.org","status":"down","error":"No response or server not reachable"}
+2024-05-30 14:00:42 error: Error checking http://lacountyparkneeds.org: {"name":"Parks- lacountyparkneeds","url":"http://lacountyparkneeds.org","status":"down","error":"No response or server not reachable"}
+2024-05-30 14:00:45 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:00:48 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:00:49 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:00:52 error: Error checking http://lacountyparkneeds.org: {"name":"Parks- lacountyparkneeds","url":"http://lacountyparkneeds.org","status":"down","error":"No response or server not reachable"}
+2024-05-30 14:00:52 error: Error checking http://hildalsolis.org: {"name":"BOS-Supervisor District 1","url":"http://hildalsolis.org","status":"down","error":"No response or server not reachable"}
+2024-05-30 14:00:53 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:00:55 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:01:16 error: Error checking http://hildalsolis.org: {"name":"BOS-Supervisor District 1","url":"http://hildalsolis.org","status":"down","error":"No response or server not reachable"}
+2024-05-30 14:01:16 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:01:16 error: Error checking http://lacountyparkneeds.org: {"name":"Parks- lacountyparkneeds","url":"http://lacountyparkneeds.org","status":"down","error":"No response or server not reachable"}
+2024-05-30 14:01:18 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 14:01:19 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 15:23:49 info: Server is running on http://localhost:3000
+2024-05-30 15:23:54 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 15:23:57 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 15:24:00 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 15:27:20 error: Error checking http://lacyouthprd.wpengine.com: {"name":"DCFS-LAC YOUTH RIGHTS","url":"http://lacyouthprd.wpengine.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 15:27:22 error: Error checking http://lacfireiisprd.wpenginepowered.com: {"name":"Fire-Intranet site","url":"http://lacfireiisprd.wpenginepowered.com","status":"down","error":"Error 401: Unauthorized"}
+2024-05-30 15:27:23 error: Error checking http://pdportal.lacounty.gov: {"name":"Pub Def - Intranet","url":"http://pdportal.lacounty.gov","status":"down","error":"Error 401: Unauthorized"}

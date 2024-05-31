@@ -4,27 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Status Checker</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #0a112e;
+            color: #f3f2f2;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #f3f2f2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #f3f2f2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #f3f2f2;
+            text-decoration: underline;
+        }
+
+        .container {
+            background: linear-gradient(45deg, #111b35, #29395f);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #3496cb;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3496cb;
+            color: #f3f2f2;
+        }
+
+        tbody tr {
+            background-color: transparent;
+            color: #f3f2f2;
+        }
+
+        tbody tr td {
+            background-color: transparent;
+            color: #f3f2f2;
+        }
+
+        tbody tr td.status-cell {
+            text-align: center; /* Horizontally center content */
+            vertical-align: middle; /* Vertically center content */
+        }
+
+        .status-icon {
+            font-size: 1.5rem;
+        }
+
+        .bg-success {
+            color: rgba(12, 231, 12, 0.774);
+        }
+
+        .bg-danger {
+            color: red;
+        }
+
+        .btn-primary {
+            background-color: #3496cb;
+            border-color: #3496cb;
+        }
+
+        .btn-primary:hover {
+            background-color: #2e84b6;
+            border-color: #2e84b6;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox iframe {
+            width: 90%;
+            height: 90%;
+            border: none;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .csp-error {
+            color: rgb(87, 4, 4);
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-4">
         <h1 class="mb-3 text-center">Daily Website Status</h1>
-        <div id="progress" class="progress mb-3">
-            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <table class="table table-striped">
+        <table id="statusTable" class="table table-striped">
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>URL</th>
                     <th>Status</th>
+                    <th>Error</th>
+                    <th>View</th>
                 </tr>
             </thead>
             <tbody id="results">
-                <!-- Results will be filled by JavaScript -->
             </tbody>
         </table>
     </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <iframe id="lightbox-frame" src=""></iframe>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/app.js"></script>
 </body>
 </html>
