@@ -6,9 +6,7 @@ This Node.js application checks the status of websites listed in an Excel file a
 ## Features
 - Reads URLs from an Excel file (`name_and_urls.xlsx`).
 - Checks the HTTP status of each URL asynchronously.
-- Displays results in a web interface with a progress bar.
 - URLs are clickable and open in new tabs.
-- Uses Bootstrap for styling.
 
 ## Installation
 
