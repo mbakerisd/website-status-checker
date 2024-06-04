@@ -1,0 +1,157 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #0a112e;
+    color: #f3f2f2;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #f3f2f2;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header, .status-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.date-time {
+    font-style: italic;
+}
+
+.status-summary p {
+    margin: 0 10px;
+}
+
+.status-icon {
+    font-size: 1.5rem;
+}
+
+.bg-success {
+    color: rgba(12, 231, 12, 0.774);
+}
+
+.bg-danger {
+    color: red;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #3496cb;
+    margin-bottom: 20px;
+    display: none;
+    transition: width 0.5s;
+}
+
+a {
+    color: #f3f2f2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f3f2f2;
+    text-decoration: underline;
+}
+
+.container {
+    background: linear-gradient(45deg, #111b35, #29395f);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #3496cb;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #3496cb;
+    font-size: 18px;
+    color: #0A112E;
+}
+
+tbody tr {
+    background-color: transparent;
+    color: #f3f2f2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+tbody tr.visible {
+    opacity: 1;
+}
+
+tbody tr td {
+    background-color: transparent;
+    color: #f3f2f2;
+}
+
+tbody tr td.status-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    background-color: #3496cb;
+    border-color: #3496cb;
+    color: #f3f2f2;
+    width: 100%;
+    height: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #0A112E;
+    border-color: #2e84b6;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox iframe {
+    width: 90%;
+    height: 90%;
+    border: none;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.csp-error {
+    color: rgb(87, 4, 4);
+    font-weight: bold;
+}
