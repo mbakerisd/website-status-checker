@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Status Checker | Daily Monitoring</title>
+    <meta name="description" content="Real-time website status monitoring dashboard">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="/images/logo.jpg" alt="Logo" style="vertical-align: middle; width: 50px; height: 50px; border-radius: 50%; margin-right: 15px;">
+            Daily Website Status
+        </h1>
+        <div class="header" id="header">
+            <p id="currentDateTime" class="date-time"></p>
+            <div id="statusSummary" class="status-summary"></div>
+        </div>
+        
+        <!-- Management Section -->
+        <div class="management-section">
+            <h3>Site Management</h3>
+            <div id="managementMessage"></div>
+            <div class="input-group">
+                <input type="text" id="siteName" placeholder="Site Name (e.g., Google)" aria-label="Site Name">
+                <input type="text" id="siteUrl" placeholder="https://example.com" aria-label="Site URL">
+                <button onclick="addNewSite()" class="btn-add">
+                    <i class="fas fa-plus"></i> Add Site
+                </button>
+            </div>
+        </div>
+        
+        <div class="progress-bar" id="progressBar"></div>
+        <table id="statusTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>URL</th>
+                    <th>Status</th>
+                    <th>Error</th>
+                    <th>View Website</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="results">
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 30px; padding: 20px; text-align: center; border-top: 2px solid #3496cb; color: #8a9cb5; font-size: 0.9rem;">
+            <p style="margin: 5px 0;">
+                <i class="fas fa-sync-alt"></i> Automatic checks run daily at 6:00 AM
+            </p>
+            <p style="margin: 5px 0;">
+                Last updated: <span id="lastUpdate"></span>
+            </p>
+        </div>
+    </div>
+    
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <iframe id="lightbox-frame" src=""></iframe>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
