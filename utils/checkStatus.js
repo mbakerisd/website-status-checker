@@ -5,18 +5,23 @@ const fs = require('fs');
 
 const EXCEL_FILE_PATH = path.join(__dirname, '..', 'data', 'name_and_urls.xlsx');
 
-async function checkUrl(name, url, retries = 3) {
+async function checkUrl(name, url, retries = 3, manualCheck = false) {
+    // If marked for manual check, skip automatic checking
+    if (manualCheck) {
+        return { name, url, status: 'caution', error: 'Manual check required', manualCheck: true };
+    }
+    
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
             const response = await axios.get(url);
-            return { name, url, status: 'up', error: 'Site is up' };
+            return { name, url, status: 'up', error: 'Site is up', manualCheck: false };
         } catch (error) {
             if (attempt < retries) {
                 console.log(`Retrying ${url} (${attempt}/${retries})...`);
                 continue;
             }
             const errorMessage = error.response ? `Error ${error.response.status}: ${error.response.statusText}` : 'No response or server not reachable';
-            const errorResult = { name, url, status: 'down', error: errorMessage };
+            const errorResult = { name, url, status: 'down', error: errorMessage, manualCheck: false };
             console.log(`Error checking ${url}: ${JSON.stringify(errorResult)}`);
             return errorResult;
         }
@@ -29,7 +34,10 @@ async function getStatusData() {
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
         const data = xlsx.utils.sheet_to_json(worksheet);
-        return await Promise.all(data.map(row => checkUrl(row.Name, row.URL)));
+        return await Promise.all(data.map(row => {
+            const manualCheck = row.ManualCheck === 'Yes' || row.ManualCheck === true;
+            return checkUrl(row.Name, row.URL, 3, manualCheck);
+        }));
     } catch (error) {
         throw new Error(`Failed to read Excel file: ${error.message}`);
     }
@@ -47,7 +55,7 @@ function getAllSites() {
     }
 }
 
-function addSite(name, url) {
+function addSite(name, url, manualCheck = false) {
     try {
         const workbook = xlsx.readFile(EXCEL_FILE_PATH);
         const sheetName = workbook.SheetNames[0];
@@ -60,8 +68,8 @@ function addSite(name, url) {
             throw new Error('Site with this URL already exists');
         }
         
-        // Add new site
-        data.push({ Name: name, URL: url });
+        // Add new site with ManualCheck flag
+        data.push({ Name: name, URL: url, ManualCheck: manualCheck ? 'Yes' : 'No' });
         
         // Write back to Excel
         const newWorksheet = xlsx.utils.json_to_sheet(data);

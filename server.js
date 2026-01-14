@@ -41,11 +41,11 @@ app.get('/sites', async (req, res) => {
 // Add a new site
 app.post('/sites', async (req, res) => {
     try {
-        const { name, url } = req.body;
+        const { name, url, manualCheck } = req.body;
         if (!name || !url) {
             return res.status(400).json({ error: 'Name and URL are required' });
         }
-        const result = addSite(name, url);
+        const result = addSite(name, url, manualCheck);
         res.json(result);
     } catch (error) {
         console.log('Error in /sites POST route:', error);

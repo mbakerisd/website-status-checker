@@ -2,19 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const progressBar = document.getElementById('progressBar');
     const header = document.getElementById('header');
     const statusSummary = document.getElementById('statusSummary');
-    const cautionSites = [
-        "http://khhoadirectory.lacounty.gov",
-        "http://pdportal.lacounty.gov",
-        "https://fireiis.fire.lacounty.gov/",
-        "https://mylakids.dcfs.lacounty.gov/",
-        "http://strategic-plan.hr.lacounty.gov",
-        "http://egov.lacounty.gov",
-        "http://wppro.lacounty.gov",
-        "http://central.gis.lacounty.gov",
-        "http://procurement.lacounty.gov",
-        "http://my.lacounty.gov",
-        "https://mywdacs.lacounty.gov/"
-    ];
 
     function updateProgressBar(percent) {
         progressBar.style.width = percent + '%';
@@ -74,19 +61,19 @@ document.addEventListener('DOMContentLoaded', function() {
             let errorMessage = result.error ? result.error : '';
             let viewButton = `<button class="btn btn-sm btn-primary view-site-btn" data-url="${result.url}" data-error="${result.error || ''}"><i class="fas fa-eye"></i> View</button>`;
 
-            if (cautionSites.includes(result.url)) {
+            // Check if this site requires manual checking
+            if (result.status === 'caution' || result.manualCheck) {
                 statusIcon = '<i class="fas fa-exclamation-triangle status-icon bg-warning" style="color: orange;"></i>';
-                errorMessage = 'Check manually';
+                errorMessage = 'Manual check required';
                 viewButton = ''; // Remove the button for caution sites
                 cautionCount++;
+            } else if (result.status === 'up') {
+                statusIcon = '<i class="fas fa-check-circle status-icon bg-success"></i>';
+                upCount++;
+                errorMessage = 'Site is up';
             } else {
-                statusIcon = result.status === 'up' ? '<i class="fas fa-check-circle status-icon bg-success"></i>' : '<i class="fas fa-times-circle status-icon bg-danger"></i>';
-                if (result.status === 'up') {
-                    upCount++;
-                    errorMessage = 'Site is up';
-                } else {
-                    downCount++;
-                }
+                statusIcon = '<i class="fas fa-times-circle status-icon bg-danger"></i>';
+                downCount++;
             }
 
             const rowHtml = `<tr class="row${index}">
@@ -95,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td class="status-cell">${statusIcon}</td>
                 <td>${errorMessage}</td>
                 <td>${viewButton}</td>
-                <td><button class="btn btn-sm btn-danger delete-site-btn" data-url="${result.url}" onclick="deleteSite('${result.url.replace(/'/g, "\\'")}')"><i class="fas fa-trash"></i> Remove</button></td>
+                <td><button class="btn btn-sm btn-danger delete-site-btn" data-url="${result.url}"><i class="fas fa-trash"></i> Remove</button></td>
             </tr>`;
             const row = $(rowHtml).appendTo('#results');
 
@@ -134,6 +121,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const error = event.target.getAttribute('data-error');
             viewSite(url, error);
         }
+        
+        // Handle delete button clicks
+        if (event.target.classList.contains('delete-site-btn') || event.target.closest('.delete-site-btn')) {
+            const button = event.target.classList.contains('delete-site-btn') ? event.target : event.target.closest('.delete-site-btn');
+            const url = button.getAttribute('data-url');
+            deleteSite(url);
+        }
     });
 });
 
@@ -141,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function addNewSite() {
     const name = document.getElementById('siteName').value.trim();
     const url = document.getElementById('siteUrl').value.trim();
+    const manualCheck = document.getElementById('manualCheck').checked;
     const messageDiv = document.getElementById('managementMessage');
     
     if (!name || !url) {
@@ -159,7 +154,7 @@ function addNewSite() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, url })
+        body: JSON.stringify({ name, url, manualCheck })
     })
     .then(response => response.json())
     .then(data => {
@@ -167,6 +162,7 @@ function addNewSite() {
             showMessage('Site added successfully! Refreshing...', 'success');
             document.getElementById('siteName').value = '';
             document.getElementById('siteUrl').value = '';
+            document.getElementById('manualCheck').checked = false;
             setTimeout(() => location.reload(), 1500);
         } else {
             showMessage(data.error || 'Failed to add site', 'error');
