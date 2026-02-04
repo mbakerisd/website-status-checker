@@ -56,6 +56,20 @@ document.addEventListener('DOMContentLoaded', function() {
         let cautionCount = 0;
         const totalSites = data.length;
 
+        // If cache is empty, show loading message and retry
+        if (totalSites === 0) {
+            console.log('Cache is still loading, retrying in 3 seconds...');
+            $('#results').html('<tr><td colspan="6" style="text-align: center; padding: 40px;"><i class="fas fa-sync-alt fa-spin" style="font-size: 2rem; color: #3496cb;"></i><br><br><strong>Loading site statuses...</strong><br>Please wait while we check all sites.</td></tr>');
+            
+            header.style.opacity = 1;
+            statusSummary.innerHTML = '<p><i class="fas fa-hourglass-half"></i> Loading site statuses, please wait...</p>';
+            statusSummary.style.opacity = 1;
+            
+            // Retry after 3 seconds
+            setTimeout(() => location.reload(), 3000);
+            return;
+        }
+
         data.forEach((result, index) => {
             let statusIcon;
             let errorMessage = result.error ? result.error : '';
@@ -112,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }).catch(error => {
         console.error('Error fetching status:', error);
         hideLoading();
+        $('#results').html('<tr><td colspan="6" style="text-align: center; padding: 40px; color: #ff6b6b;"><i class="fas fa-exclamation-circle" style="font-size: 2rem;"></i><br><br><strong>Error loading site statuses</strong><br>Please refresh the page.</td></tr>');
     });
 
     // Delegate event listener to handle dynamic content
@@ -212,4 +227,37 @@ function showMessage(message, type) {
     setTimeout(() => {
         messageDiv.style.display = 'none';
     }, 5000);
+}
+
+// Function to refresh status
+function refreshStatus() {
+    const refreshBtn = document.getElementById('refreshBtn');
+    const originalText = refreshBtn.innerHTML;
+    
+    // Disable button and show loading state
+    refreshBtn.disabled = true;
+    refreshBtn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Refreshing...';
+    
+    fetch('/refresh-status', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showMessage('Status refreshed successfully! Reloading page...', 'success');
+            setTimeout(() => location.reload(), 1500);
+        } else {
+            showMessage('Failed to refresh status', 'error');
+            refreshBtn.disabled = false;
+            refreshBtn.innerHTML = originalText;
+        }
+    })
+    .catch(error => {
+        showMessage('Error refreshing status: ' + error.message, 'error');
+        refreshBtn.disabled = false;
+        refreshBtn.innerHTML = originalText;
+    });
 }

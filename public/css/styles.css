@@ -176,6 +176,46 @@ h1 {
     transform: translateY(0);
 }
 
+.btn-refresh {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #3496cb 0%, #2672a3 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-refresh:hover:not(:disabled) {
+    background: linear-gradient(135deg, #2672a3 0%, #3496cb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 150, 203, 0.3);
+}
+
+.btn-refresh:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-refresh:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-refresh .fa-spin {
+    animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 #managementMessage {
     padding: 12px 15px;
     margin-bottom: 10px;

@@ -5,7 +5,15 @@ const fs = require('fs');
 
 const EXCEL_FILE_PATH = path.join(__dirname, '..', 'data', 'name_and_urls.xlsx');
 
-async function checkUrl(name, url, retries = 3, manualCheck = false) {
+// Axios instance with timeout
+const axiosInstance = axios.create({
+    timeout: 10000, // 10 second timeout per request
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    }
+});
+
+async function checkUrl(name, url, retries = 2, manualCheck = false) {
     // If marked for manual check, skip automatic checking
     if (manualCheck) {
         return { name, url, status: 'caution', error: 'Manual check required', manualCheck: true };
@@ -13,14 +21,21 @@ async function checkUrl(name, url, retries = 3, manualCheck = false) {
     
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
-            const response = await axios.get(url);
+            const response = await axiosInstance.get(url);
             return { name, url, status: 'up', error: 'Site is up', manualCheck: false };
         } catch (error) {
             if (attempt < retries) {
                 console.log(`Retrying ${url} (${attempt}/${retries})...`);
                 continue;
             }
-            const errorMessage = error.response ? `Error ${error.response.status}: ${error.response.statusText}` : 'No response or server not reachable';
+            let errorMessage;
+            if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+                errorMessage = 'Request timed out';
+            } else if (error.response) {
+                errorMessage = `Error ${error.response.status}: ${error.response.statusText}`;
+            } else {
+                errorMessage = 'No response or server not reachable';
+            }
             const errorResult = { name, url, status: 'down', error: errorMessage, manualCheck: false };
             console.log(`Error checking ${url}: ${JSON.stringify(errorResult)}`);
             return errorResult;
@@ -34,10 +49,23 @@ async function getStatusData() {
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
         const data = xlsx.utils.sheet_to_json(worksheet);
-        return await Promise.all(data.map(row => {
-            const manualCheck = row.ManualCheck === 'Yes' || row.ManualCheck === true;
-            return checkUrl(row.Name, row.URL, 3, manualCheck);
-        }));
+        
+        const results = [];
+        const batchSize = 10; // Process 10 sites at a time
+        
+        for (let i = 0; i < data.length; i += batchSize) {
+            const batch = data.slice(i, i + batchSize);
+            const batchPromises = batch.map(row => {
+                const manualCheck = row.ManualCheck === 'Yes' || row.ManualCheck === true;
+                return checkUrl(row.Name, row.URL, 2, manualCheck);
+            });
+            
+            const batchResults = await Promise.all(batchPromises);
+            results.push(...batchResults);
+            console.log(`Checked ${Math.min(i + batchSize, data.length)}/${data.length} sites...`);
+        }
+        
+        return results;
     } catch (error) {
         throw new Error(`Failed to read Excel file: ${error.message}`);
     }
